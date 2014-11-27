@@ -1,0 +1,6 @@
+D:\DevCode\0xack13\CustomReflection\CustomReflection\bin\Debug\CustomReflection.exe.config
+D:\DevCode\0xack13\CustomReflection\CustomReflection\bin\Debug\CustomReflection.exe
+D:\DevCode\0xack13\CustomReflection\CustomReflection\bin\Debug\CustomReflection.pdb
+D:\DevCode\0xack13\CustomReflection\CustomReflection\obj\Debug\CustomReflection.csprojResolveAssemblyReference.cache
+D:\DevCode\0xack13\CustomReflection\CustomReflection\obj\Debug\CustomReflection.exe
+D:\DevCode\0xack13\CustomReflection\CustomReflection\obj\Debug\CustomReflection.pdb
