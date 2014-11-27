@@ -11,15 +11,26 @@ namespace CustomReflection
     {
         private static int a = 5, b = 10, c = 20;
 
+        private int privField;
+
         static void Main(string[] args)
         {            
             var assembly = Assembly.GetExecutingAssembly();
+            Type t = typeof(Program);
             Console.WriteLine("Name of the assembly: " + assembly.FullName);
+
+            //Find Private Fields
+            FieldInfo[] fields = t.GetFields(
+                         BindingFlags.NonPublic |
+                         BindingFlags.Instance);
+            foreach (var field in fields)
+            {
+                Console.WriteLine("Private fields are: " + field.Name);
+            }
             
             Console.WriteLine("a + b + c = " + (a + b + c));
             Console.WriteLine("Please enter the name of the variable that you wish to change:");
             string varName = Console.ReadLine();
-            Type t = typeof(Program);
             FieldInfo fieldInfo = t.GetField(varName, BindingFlags.NonPublic | BindingFlags.Static);
             if (fieldInfo != null)
             {
@@ -33,6 +44,10 @@ namespace CustomReflection
                 }
                 Console.ReadKey();
             }
+
+            
+
+            
         }
     }
 
