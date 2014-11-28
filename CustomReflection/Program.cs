@@ -17,8 +17,7 @@ namespace CustomReflection
         {            
             var assembly = Assembly.GetExecutingAssembly();
             Type t = typeof(Program);
-            Console.WriteLine("Name of the assembly: " + assembly.FullName);
-
+            
             //Find Private Fields
             FieldInfo[] fields = t.GetFields(
                          BindingFlags.NonPublic |
@@ -27,7 +26,9 @@ namespace CustomReflection
             {
                 Console.WriteLine("Private fields are: " + field.Name);
             }
-            
+
+            Console.WriteLine("Name of the assembly: " + assembly.FullName);
+
             Console.WriteLine("a + b + c = " + (a + b + c));
             Console.WriteLine("Please enter the name of the variable that you wish to change:");
             string varName = Console.ReadLine();
